@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Pomodoro</title>
+</head>
+
+<body>
+
+    <main id="pomodoroClock">
+        <ul>
+            <li><i class="far fa-clock"></i><span id="timer">25:00</span></li>
+            <li>
+                <i class="fas fa-play"></i>
+                <i class="fas fa-pause"></i>
+                <i class="fas fa-stop"></i>
+                <i class="fas fa-sync-alt"></i>
+            </li>
+            <li><i class="fas fa-cog"></i></li>
+        </ul>
+    </main>
+
+    <section id="settings">
+        <ul>
+            <li>
+                <label for="sessionL">SESSION LENGTH</label>
+                <input type="number" id="sessionL" value="25" min="1" max="60">
+                <span id="errorIn"></span>
+            </li>
+
+            <li>
+                <label for="breakL">BREAK LENGTH</label>
+                <select id="breakL">
+                    <option value="1">1</option>
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                </select>
+            </li>
+
+            <li>
+                <label for="color">COLOR SELECT</label>
+                <input type="color" id="color" value="#FF3D55">
+            </li>
+
+            <li><button onclick="settSubmit()"><p>APPLY</p></button></li>
+        </ul>
+    </section>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
