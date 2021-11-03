@@ -17,7 +17,7 @@ function settSubmit() {
 
 function start(){
     pause();
-    cron = setInterval(() => { timer(); }, 300);
+    cron = setInterval(() => { timer(); }, 1000);
 }
 
 function pause(){
