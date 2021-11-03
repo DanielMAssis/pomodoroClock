@@ -2,5 +2,8 @@
 
 body ,html {
     height: 100%;
+    color: #fff;
     background-color: rgb(32, 36, 51);
 }
+
+.fas {cursor: pointer;}
