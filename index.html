@@ -13,23 +13,31 @@
 <body>
     <audio id="sound" src="midia/alert.mp3"></audio>
     <main id="pomodoroClock">
+        <div class="circle">
+            <svg>
+                <circle cx="225" cy="225" r="185" />
+            </svg>
+            <svg class="color">
+                <circle cx="225" cy="225" r="185" />
+            </svg>
+        </div>
         <ul>
-            <li><i class="far fa-clock"></i><span id="minute">01</span>:<span id="second">00</span></li>
+            <li id="cron"><span id="minute">25</span>:<span id="second">00</span></li>
             <li>
                 <i class="fas fa-play" onclick="start()"></i>
                 <i class="fas fa-pause" onclick="pause()"></i>
                 <i class="fas fa-stop" onclick="reset()"></i>
             </li>
         </ul>
-        <i class="fas fa-cog"></i>
+        <i class="fas fa-cog" onclick="settings(true)"></i>
     </main>
 
     <section id="settings">
         <ul>
-            <i class="fas fa-times"></i>
+            <li><b>SETTINGS</b> <i class="fas fa-times" onclick="settings(false)"></i></li>
             <li>
                 <label for="sessionL">SESSION LENGTH</label>
-                <input type="number" id="sessionL" value="1" min="1" max="60">
+                <input type="number" id="sessionL" value="25" min="1" max="60">
                 <span id="errorIn"></span>
             </li>
 
@@ -45,10 +53,15 @@
 
             <li>
                 <label for="color">COLOR SELECT</label>
-                <input type="color" id="color" value="#FF3D55">
+                <input type="color" id="color" value="#FFFFFF">
             </li>
 
-            <li><button onclick="settSubmit()"><p>APPLY</p></button></li>
+            <li>
+                <label for="alert">SOUND ALERT</label>
+                <input type="checkbox" id="alert" checked>
+            </li>
+
+            <button onclick="settSubmit()"><p>APPLY</p></button>
         </ul>
     </section>
 
